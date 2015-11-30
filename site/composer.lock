@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "428c9b539a01303c109ef038d7f4f5a4",
-    "content-hash": "3bc210117ece344719e491021aa5f746",
+    "hash": "2263c0d2c447b749e1ea01eb7d130e55",
+    "content-hash": "b4299a2ca13f5670b468f49f80b923de",
     "packages": [
         {
             "name": "composer/installers",
@@ -186,6 +186,48 @@
                 "wordpress"
             ],
             "time": "2015-06-11 15:15:30"
+        },
+        {
+            "name": "roots/soil",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "c9e224facb851011284c3ea925980d988473fb3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/c9e224facb851011284c3ea925980d988473fb3f",
+                "reference": "c9e224facb851011284c3ea925980d988473fb3f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2015-11-19 04:59:49"
         },
         {
             "name": "vlucas/phpdotenv",
