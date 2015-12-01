@@ -30,6 +30,10 @@ function setup() {
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
 
+    register_nav_menus([
+    'nav-fonds' => __('Navigation Fonds', 'sage')
+  ]);
+
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
@@ -85,6 +89,7 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_home(),
     is_page_template('template-custom.php'),
   ]);
 
