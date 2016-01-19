@@ -1,3 +1,40 @@
 .banner {
-	min-height: 10vh;
+	padding: $spacer 0;
+	background-image: url(../images/bg-header.png);
+	color: #333;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+
+	.site-title {
+		font-weight: bold;
+	}
+
+	.logo {
+		font-size: 1.6em;
+		color: #000;
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+
+	.home & {
+
+		.container {
+			display: flex;
+			max-width: 600px;
+			height: 40vh;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+
+			.wrapper {
+				text-align: center;
+			}
+
+			.site-title {
+				font-size: 35px;
+				
+			}
+		}
+	}
 }

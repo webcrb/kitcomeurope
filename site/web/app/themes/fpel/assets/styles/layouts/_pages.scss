@@ -1,0 +1,156 @@
+
+.jumbotron {
+	border : 1px solid $gray;
+	.fonds-feder & {
+		background: lighten($feder, 50%);
+		border-color: $feder;
+	}
+	.fonds-feamp & {
+		background: lighten($feamp, 50%);
+		border-color: $feamp;
+	}
+	.fonds-fse & {
+		background: lighten($fse, 50%);
+		border-color: $fse;
+	}
+	.fonds-feader & {
+		background: lighten($feader, 50%);
+		border-color: $feader;
+	}
+}
+
+.btn-primary {
+	.fonds-feder & {
+		@extend .btn-feder;
+	}
+	.fonds-feamp & {
+		@extend .btn-feamp;
+	}
+	.fonds-fse & {
+		@extend .btn-fse;
+	}
+	.fonds-feader & {
+		@extend .btn-feader;
+	}
+}
+.btn-primary-outline {
+	.fonds-feder & {
+		@extend .btn-feder-outline;
+	}
+	.fonds-feamp & {
+		@extend .btn-feamp-outline;
+	}
+	.fonds-fse & {
+		@extend .btn-fse-outline;
+	}
+	.fonds-feader & {
+		@extend .btn-feader-outline;
+	}
+}
+
+.nav-section {
+	margin: 1rem 0;
+	padding: 0;
+
+	.nav-link {
+		background: $gray-lighter;
+
+		&.active {
+
+			.fonds-feder & {
+				background: $feder;
+			}
+			.fonds-feamp & {
+				background: $feamp;
+			}
+			.fonds-fse & {
+				background: $fse;
+			}
+			.fonds-feader & {
+				background: $feader;
+			}
+
+		}
+
+	}
+}
+
+.img-logo {
+	max-height: 300px;
+}
+
+.section-content {
+	a {
+		position: relative;
+		display: inline-block;
+		border-bottom: 1px dotted $brand-primary;
+		transition: all 0.3s;
+
+		.fonds-feder & {
+			border-color: $feder;
+		}
+		.fonds-feamp & {
+			border-color: $feamp;
+		}
+		.fonds-fse & {
+			border-color: $fse;
+		}
+		.fonds-feader & {
+			border-color: $feader;
+		}
+
+		&:after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: $brand-primary;
+			content: '';
+
+			.fonds-feder & {
+				background: $feder;
+			}
+			.fonds-feamp & {
+				background: $feamp;
+			}
+			.fonds-fse & {
+				background: $fse;
+			}
+			.fonds-feader & {
+				background: $feader;
+			}
+		}
+
+		&:after {
+			opacity: 0;
+			transition: top 0.3s, opacity 0.3s, transform 0.3s;
+		}
+
+		&:hover, &:focus {
+			text-decoration: none;
+			border-bottom-style: solid;
+
+			.fonds-feder & {
+				color: $feder;
+			}
+			.fonds-feamp & {
+				color: $feamp;
+			}
+			.fonds-fse & {
+				color: $fse;
+			}
+			.fonds-feader & {
+				color: $feader;
+			}
+
+			&:before, &:after {
+				transform: scale(1);
+			}
+			&:after {
+				top: 0%;
+			opacity: 1;
+			}
+		}
+	}
+}

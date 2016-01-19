@@ -30,23 +30,30 @@ $fondseuropeens = get_terms('fonds', $europeens);
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
+
+  <h2 class="text-center">Vous bénéficiez d'un cofinancement via le :</h2>
+
+  <nav class="nav-fonds">
+      <?php
+       if ( ! empty( $fondseuropeens ) && ! is_wp_error( $fondseuropeens ) ){
+           echo '<ul class="list list-unstyled">';
+           foreach ( $fondseuropeens as $term ) { ?>
+             
+             <li class="list-item">
+              <div class="menu-item menu-<?php echo $term->slug; ?>">
+                  <div class="menu-item-wrapper">
+                      <h2><?php echo $term->name; ?></h2>
+                      <p><?php echo $term->description; ?></p>
+                      <a href="<?php echo get_term_link( $term ); ?>" class="btn btn-primary-outline">acceder</a>
+                  </div>
+              </div>
+             
+              </li>
+           <?php }
+           echo '</ul>';
+       }
+      ?>
+  </nav>
+
+  
 <?php endwhile; ?>
-
-<hr>
-
-<h2>Vous bénéficiez d'un cofinancement via le :</h2>
-
-<nav class="nav-fonds">
-  <?php
-	 if ( ! empty( $fondseuropeens ) && ! is_wp_error( $fondseuropeens ) ){
-	     echo '<ul class="list list-unstyled">';
-	     foreach ( $fondseuropeens as $term ) {
-	       echo '<li class="menu-item"><a href="' . get_term_link( $term ) . '">' . $term->name . '</a></li>';
-	        
-	     }
-	     echo '</ul>';
-	 }
-	?>
-</nav>

@@ -5,5 +5,36 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+$font-family-sans-serif: 'Trebuchet Ms';
+$font-family-serif: 'Bretagne';
+$headings-font-family: $font-family-sans-serif;
+
+$font-size-h2:               1.8rem !default;
+$font-size-h3:               1.4rem !default;
+$font-size-h4:               1.2rem !default;
+
 // Colors
-$brand-primary:         #b1c800;
+$brand-primary:         #333;
+
+$feder: #ffc90d;
+$feader: #b1c800;
+$fse: #d32b75;
+$feamp: #12809c;
+
+// btn
+
+$btn-feder-color: #333;
+$btn-feder-bg: $feder;
+$btn-feder-border: $feder;
+
+$btn-feader-color: #fff;
+$btn-feader-bg: $feader;
+$btn-feader-border: $feader;
+
+$btn-fse-color: #fff;
+$btn-fse-bg: $fse;
+$btn-fse-border: $fse;
+
+$btn-feamp-color: #fff;
+$btn-feamp-bg: $feamp;
+$btn-feamp-border: $feamp;

@@ -1,0 +1,18 @@
+@media print {
+
+	.noprint {
+		display: none;
+	}
+
+	.banner {
+		background: url(../images/bg-print.jpg) no-repeat center;
+		height: 150px;
+		.site-title {
+			display: none;
+		}
+	}
+
+	.single .fiche {
+		border: none;
+	}
+}

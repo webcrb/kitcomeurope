@@ -1,0 +1,27 @@
+.btn-feder {
+  @include button-variant($btn-feder-color, $btn-feder-bg, $btn-feder-border);
+}
+.btn-feader {
+  @include button-variant($btn-feader-color, $btn-feader-bg, $btn-feader-border);
+}
+.btn-feamp {
+  @include button-variant($btn-feamp-color, $btn-feamp-bg, $btn-feamp-border);
+}
+.btn-fse {
+  @include button-variant($btn-fse-color, $btn-fse-bg, $btn-fse-border);
+}
+
+
+// Remove all backgrounds
+.btn-feder-outline {
+  @include button-outline-variant($btn-feder-bg);
+}
+.btn-feader-outline {
+  @include button-outline-variant($btn-feader-border);
+}
+.btn-feamp-outline {
+  @include button-outline-variant($btn-feamp-bg);
+}
+.btn-fse-outline {
+  @include button-outline-variant($btn-fse-bg);
+}
