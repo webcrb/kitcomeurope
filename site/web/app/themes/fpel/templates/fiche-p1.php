@@ -21,33 +21,30 @@ if( has_term( 'feader-leader', 'fonds' ) ) {
 $p1= new WP_Query( array( 'page_id' => $pageid) );
 if ( $p1->have_posts() ) : ?>
 
-    <!-- pagination here -->
-    <section>
-    <a name="p1">&nbsp;</a>
+  <!-- pagination here -->
+
     <!-- the loop -->
     <?php while ( $p1->have_posts() ) : $p1->the_post(); ?>
-        <header class="section-header">
-          <h2>L'utilisation du logo sur vos supports de communication</h2>
-        </header>
-        <?php 
 
-        $logo = get_field('logo');
-        $logotypes = get_field('logotypes');
-        $gabarits = get_field('gabarits');
+      <?php 
 
-        if( !empty($logo) ): ?>
+      $logo = get_field('logo');
+      $logotypes = get_field('logotypes');
+      $gabarits = get_field('gabarits');
 
-          <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" class="img-logo img-fluid" />
+      if( !empty($logo) ): ?>
 
-        <?php endif; ?>
+        <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" class="img-logo img-fluid" />
 
-        <div class="section-content"><?php the_content(); ?></div>
+      <?php endif; ?>
+
+      <?php the_content(); ?>
+      
     <?php endwhile; ?>
     <!-- end of the loop -->
 
-    <!-- pagination here -->
-    </section>
+  <!-- pagination here -->
 
-    <?php wp_reset_postdata(); ?>
+  <?php wp_reset_postdata(); ?>
 
-  <?php endif; ?>
+<?php endif; ?>

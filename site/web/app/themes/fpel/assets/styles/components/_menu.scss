@@ -22,7 +22,7 @@
 			border-color: $feder;
 		}
 		
-		.menu-feader {
+		.menu-feader, .menu-feader-leader {
 			border-color: $feader;
 		}
 		
@@ -57,7 +57,7 @@
 				background: lighten($fse, 55%);
 				border-color: $fse;
 			}
-			.term-feader & {
+			.term-feader &, .term-feader-leader & {
 				background: lighten($feader, 55%);
 				border-color: $feader;
 			}

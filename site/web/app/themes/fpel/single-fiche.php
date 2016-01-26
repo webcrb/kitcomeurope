@@ -3,108 +3,68 @@
 $montant = get_field('montant');
 
 ?>
-
 <?php while (have_posts()) : the_post(); ?>
 
 	<ol class="breadcrumb">
-  		<li><a href="<?php bloginfo('url') ?>">Accueil</a></li>
-  		<li><?php the_terms( $post->ID, 'fonds', '', '' ); ?></li>
-  		<li class="active"><?php echo $montant->name; ?></li>
+		<li><a href="<?php bloginfo('url') ?>">Accueil</a></li>
+		<li><?php the_terms( $post->ID, 'fonds', '', '' ); ?></li>
+		<li class="active"><?php echo $montant->name; ?></li>
 	</ol>
 
 	<article <?php post_class(); ?>>
 
-			<div class="row">
+		<div class="row">
 
-				<div class="col-md-4 col-md-push-8">
-			  		
-			  		<?php get_template_part('templates/sidebar-fiches'); ?>
-					
-				</div> <!-- /.col-md-4 -->
+			<div class="col-md-4 col-md-push-8">
 
-				<div class="col-md-8 col-md-pull-4">
+				<?php get_template_part('templates/sidebar-fiches'); ?>
 
-					<header class="jumbotron">
-				  	
-				  	<?php if( has_term( 'feader', 'fonds' ) ) : ?>
-					  
-					  <p class="lead">
-					  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong>Programme de développement rural de la Bretagne</strong>. Votre projet a obtenu une <strong><?php echo $montant->name; ?></strong>.
-					  </p>
-					
-					<?php endif; ?>
-					
-					<?php if( has_term( 'feder', 'fonds' ) ) : ?>
-					
-					   <p class="lead">
-					  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong>FEDER</strong>. Votre projet a obtenu une <strong><?php echo $montant->name; ?></strong>.
-					  </p>
-					
-					<?php endif; ?>
-					
-					<?php if( has_term( 'fse', 'fonds' ) ) : ?>
-					  
-					   <p class="lead">
-					  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong><?php echo $montant->name; ?></strong>.
-					  </p>
-					
-					<?php endif; ?>
-					
-					<?php if( has_term( 'feamp', 'fonds' ) ) : ?>
-					 
-					   <p class="lead">
-					  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong>FEAMP</strong>. Votre projet a obtenu une <strong><?php echo $montant->name; ?></strong>.
-					  </p>
-					
-					<?php endif; ?>
-					
-					<?php if( has_term( 'feader-leader', 'fonds' ) ) : ?>
-					 
-					  <p class="lead">
-					  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong>Programme Leader</strong>. Votre projet a obtenu une <strong><?php echo $montant->name; ?></strong>.
-					  </p>
+			</div> <!-- /.col-md-4 -->
 
-					<?php endif; ?>
+			<div class="col-md-8 col-md-pull-4">
 
-						<p>Cette fiche pratique a pour but de vous aider à respecter vos obligations de publicité et de vous accompagner dans vos actions de communication.</p>
+				<?php get_template_part('templates/header', 'fiches'); ?>
 
-					</header>
-					<nav class="nav-section">
+				<div id="accordion" role="tablist" aria-multiselectable="true">
+					<section class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h2 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#logo" aria-expanded="true" aria-controls="collapseOne">1 &middot; L'utilisation du logo sur vos supports de communication <span class="arrow icon-chevron-down"></span></a>
+							</h4>
+						</div>
+						<div id="logo" class="panel-collapse collapse section-content" role="tabpanel" aria-labelledby="headingOne">
+							<?php get_template_part('templates/fiche', 'p1'); ?>
+						</div>
+					</section>
+					<section class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h2 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#tools" aria-expanded="true" aria-controls="collapseTwo">2 &middot; Les outils de communication spécifiques <span class="arrow icon-chevron-down"></span></a>
+							</h4>
+						</div>
+						<div id="tools" class="panel-collapse collapse section-content" role="tabpanel" aria-labelledby="headingTwo">
+							<?php get_template_part('templates/fiche', 'p2'); ?>
+						</div>
+					</section>
+					<section class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h2 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#keys" aria-expanded="true" aria-controls="collapseThree">3 &middot; Les clés pour valoriser votre projet européen <span class="arrow icon-chevron-down"></span></a>
+							</h4>
+						</div>
+						<div id="keys" class="panel-collapse collapse section-content" role="tabpanel" aria-labelledby="headingThree">
+							<?php get_template_part('templates/fiche', 'p3'); ?>
+						</div>
+					</section>
+				</div>
 
-					  	<!-- Nav tabs -->
-						<ul class="nav nav-pills" role="tablist">
-						  <li class="nav-item">
-						    <a class="nav-link active" data-toggle="tab" href="#logo" role="tab">Le logo</a>
-						  </li>
-						  <li class="nav-item">
-						    <a class="nav-link" data-toggle="tab" href="#tools" role="tab">Les outils</a>
-						  </li>
-						  <li class="nav-item">
-						    <a class="nav-link" data-toggle="tab" href="#keys" role="tab">Les clés</a>
-						  </li>
-						</ul>
 
-					</nav>
+			</div><!-- /.col-md-8 -->
 
-					<!-- Tab panes -->
-					<div class="tab-content">
-					  <div class="tab-pane active" id="logo" role="tabpanel">
-					  	<?php get_template_part('templates/fiche', 'p1'); ?>
-					  </div>
-					  <div class="tab-pane fade" id="tools" role="tabpanel">
-					  	<?php get_template_part('templates/fiche', 'p2'); ?>
-					  </div>
-					  <div class="tab-pane fade" id="keys" role="tabpanel">
-					  	<?php get_template_part('templates/fiche', 'p3'); ?>
-					  </div>
-					</div>
-					
-					
-				</div><!-- /.col-md-8 -->
-				
-			</div> <!-- /row -->
+		</div> <!-- /row -->
 	</article>
 
 	<div class="smoothscroll backtop"><a href="#top"><i class="icon-haut"></i></a></div>
 
 <?php endwhile; ?>
+

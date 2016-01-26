@@ -51,6 +51,23 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+
+    'single_fiche' : {
+      init: function() {
+        // JavaScript to be fired on the home page
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+
+        $('.panel-title a').click( 
+          function() {
+            $(this).parents('panel').siblings().find('.active').removeClass('active');
+            $(this).toggleClass('active');
+            $(this).find('.arrow').toggleClass('icon-chevron-down icon-chevron-up');
+          }
+        );
+      }
     }
   };
 

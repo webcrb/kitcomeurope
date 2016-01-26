@@ -23,12 +23,23 @@ query_posts( $query_string . '&orderby=title&order=ASC' );
 		</nav>
 	</div>
 	<div class="col-md-4">
-		<p>Si vous ne connaissez pas le montant total de l'aide publique dont vous bénéficiez et si vous vous interrogez sur les obligations de publicité liées au cofinancement de votre projet, veuillez prendre contact avec le Conseil régional de Bretagne :</p>
-	<address class="border">
-		<h3>Direction des Affaires Européennes et Internationales</h3>
-		<p>Juliette CRISTESCU, Chargée du pilotage de l’information et de l’animation des programmes européens<br/>
-		Tél. 02 22 51 60 08<br/>
-		europe@bretagne.bzh</p>
-	</address>
+		<?php $infos= new WP_Query( array( 'page_id' => 248) );
+		if ( $infos->have_posts() ) : ?>
+
+		  <!-- pagination here -->
+
+		  <!-- the loop -->
+		  <?php while ( $infos->have_posts() ) : $infos->the_post(); ?>
+
+			<?php the_content(); ?>
+		  
+		  <?php endwhile; ?>
+		  <!-- end of the loop -->
+
+		  <!-- pagination here -->
+
+		  <?php wp_reset_postdata(); ?>
+		<?php endif; ?>
+		
 	</div>
 </div>
