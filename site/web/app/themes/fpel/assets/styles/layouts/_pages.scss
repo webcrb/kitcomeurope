@@ -1,58 +1,27 @@
 
 .jumbotron {
 	border : 1px solid $gray;
+	background: $body-bg;
+	
 	.fonds-feder & {
-		background: lighten($feder, 50%);
+		
 		border-color: $feder;
 	}
 	.fonds-feamp & {
-		background: lighten($feamp, 50%);
 		border-color: $feamp;
 	}
 	.fonds-fse & {
-		background: lighten($fse, 50%);
 		border-color: $fse;
 	}
 	.fonds-feader &, .fonds-feader-leader & {
-		background: lighten($feader, 50%);
 		border-color: $feader;
 	}
 }
 
-.btn-primary {
-	.fonds-feder & {
-		@extend .btn-feder;
-	}
-	.fonds-feamp & {
-		@extend .btn-feamp;
-	}
-	.fonds-fse & {
-		@extend .btn-fse;
-	}
-	.fonds-feader &, .fonds-feader-leader & {
-		@extend .btn-feader;
-	}
-}
-.btn-primary-outline {
-	.fonds-feder & {
-		@extend .btn-feder-outline;
-	}
-	.fonds-feamp & {
-		@extend .btn-feamp-outline;
-	}
-	.fonds-fse & {
-		@extend .btn-fse-outline;
-	}
-	.fonds-feader &, .fonds-feader-leader & {
-		@extend .btn-feader-outline;
-	}
-}
 
 .panel {
 	
 	margin-bottom: 1em;
-
-
 
 	.panel-heading {
 		
@@ -144,7 +113,7 @@
 }
 
 .section-content {
-	a {
+	> p a, li a {
 		position: relative;
 		display: inline-block;
 		border-bottom: 1px dotted $brand-primary;

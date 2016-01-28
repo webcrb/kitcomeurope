@@ -1,27 +1,27 @@
-.btn-feder {
+.btn-feder, .fonds-feder .btn-primary {
   @include button-variant($btn-feder-color, $btn-feder-bg, $btn-feder-border);
 }
-.btn-feader {
+.btn-feader, .fonds-feader .btn-primary, .fonds-feader-leader .btn-primary {
   @include button-variant($btn-feader-color, $btn-feader-bg, $btn-feader-border);
 }
-.btn-feamp {
+.btn-feamp, .fonds-feamp .btn-primary {
   @include button-variant($btn-feamp-color, $btn-feamp-bg, $btn-feamp-border);
 }
-.btn-fse {
+.btn-fse, .fonds-fse .btn-primary {
   @include button-variant($btn-fse-color, $btn-fse-bg, $btn-fse-border);
 }
 
 
 // Remove all backgrounds
-.btn-feder-outline {
+.btn-feder-outline, .fonds-feder .btn-primary-outline {
   @include button-outline-variant($btn-feder-bg);
 }
-.btn-feader-outline {
+.btn-feader-outline, .fonds-feader .btn-primary-outline, .fonds-feader-leader .btn-primary-outline {
   @include button-outline-variant($btn-feader-border);
 }
-.btn-feamp-outline {
+.btn-feamp-outline, .fonds-feamp .btn-primary-outline {
   @include button-outline-variant($btn-feamp-bg);
 }
-.btn-fse-outline {
+.btn-fse-outline, .fonds-fse .btn-primary-outline  {
   @include button-outline-variant($btn-fse-bg);
 }

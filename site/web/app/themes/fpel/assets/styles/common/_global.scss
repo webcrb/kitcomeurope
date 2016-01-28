@@ -1,5 +1,5 @@
 body {
-	background: #000;
+	//background: #000;
 }
 
 .container-fluid {
@@ -13,6 +13,7 @@ body {
 .wrap {
 	background: $body-bg;
 	padding: ($spacer * 2) 0;
+	min-height: 50vh;
 }
 
 .section-header {

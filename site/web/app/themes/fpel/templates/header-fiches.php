@@ -8,7 +8,7 @@ $montant = get_field('montant');
 	<?php if( has_term( 'feader', 'fonds' ) ) : ?>
   
   <p class="lead">
-  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong>Programme de développement rural de la Bretagne</strong>. Votre projet a obtenu une <strong><?php echo $montant->name; ?></strong>.
+  	Vous bénéficiez d'un soutien de l’Union européenne via le <strong>Programme de développement rural 2014-2020 Bretagne</strong>. Votre projet a obtenu une <strong><?php echo $montant->name; ?></strong>.
   </p>
 
 <?php endif; ?>

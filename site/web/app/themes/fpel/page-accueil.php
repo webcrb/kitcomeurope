@@ -44,7 +44,7 @@ $fondseuropeens = get_terms('fonds', $europeens);
                   <div class="menu-item-wrapper">
                       <h2><?php echo $term->name; ?></h2>
                       <p><?php echo $term->description; ?></p>
-                      <a href="<?php echo get_term_link( $term ); ?>" class="btn btn-primary-outline">acceder</a>
+                      <a href="<?php echo get_term_link( $term ); ?>" class="btn btn-primary-outline">Accéder <span>&#8594;</span></a>
                   </div>
               </div>
              

@@ -6,11 +6,15 @@
 
 	.site-title {
 		font-weight: bold;
-	}
+		.logo { 
+			font-size: 1.8em;
+			color: #000;
 
-	.logo {
-		font-size: 1.6em;
-		color: #000;
+			&:hover, &:focus {
+				text-decoration: none;
+				color: #222;
+			}
+		}	 
 	}
 	
 	p {

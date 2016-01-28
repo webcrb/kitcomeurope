@@ -30,8 +30,12 @@ function setup() {
     'primary_navigation' => __('Primary Navigation', 'sage')
   ]);
 
-    register_nav_menus([
+  register_nav_menus([
     'nav-fonds' => __('Navigation Fonds', 'sage')
+  ]);
+  
+  register_nav_menus([
+    'nav-footer' => __('Navigation Pied de page', 'sage')
   ]);
 
   // Enable post thumbnails
