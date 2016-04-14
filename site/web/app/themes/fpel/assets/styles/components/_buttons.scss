@@ -1,27 +1,49 @@
-.btn-feder, .fonds-feder .btn-primary {
-  @include button-variant($btn-feder-color, $btn-feder-bg, $btn-feder-border);
-}
-.btn-feader, .fonds-feader .btn-primary, .fonds-feader-leader .btn-primary {
-  @include button-variant($btn-feader-color, $btn-feader-bg, $btn-feader-border);
-}
-.btn-feamp, .fonds-feamp .btn-primary {
-  @include button-variant($btn-feamp-color, $btn-feamp-bg, $btn-feamp-border);
-}
-.btn-fse, .fonds-fse .btn-primary {
-  @include button-variant($btn-fse-color, $btn-fse-bg, $btn-fse-border);
-}
+@mixin button-fonds-variant($color) {
+  	color: $body-color;
+ 	background-color: $gray-lighter;
+ 	position: relative;
+  
+  * {
+  	position: relative;
+  	z-index: 10;
+  }
 
+  &:before {
+  	content: '';
+  	width: 0.2em;
+  	height: 100%;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	background-color: $color;
+  	z-index: 1;
+  	transition: all 0.2s ease;
+  } 
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  &:hover,
+  .open > &.dropdown-toggle {
+    color: #fff!important;
+     &:before {
+     	width: 100%;
+     }
+  }
+
+}
 
 // Remove all backgrounds
-.btn-feder-outline, .fonds-feder .btn-primary-outline {
-  @include button-outline-variant($btn-feder-bg);
+.btn-fonds-feder, .fonds-feder .btn-fonds{
+  @include button-fonds-variant($btn-feder-bg);
 }
-.btn-feader-outline, .fonds-feader .btn-primary-outline, .fonds-feader-leader .btn-primary-outline {
-  @include button-outline-variant($btn-feader-border);
+.btn-fonds-feader, .fonds-feader .btn-fonds, .fonds-feader-leader .btn-fonds {
+  @include button-fonds-variant($btn-feader-border);
 }
-.btn-feamp-outline, .fonds-feamp .btn-primary-outline {
-  @include button-outline-variant($btn-feamp-bg);
+.btn-fonds-feamp, .fonds-feamp .btn-fonds {
+  @include button-fonds-variant($btn-feamp-bg);
 }
-.btn-fse-outline, .fonds-fse .btn-primary-outline  {
-  @include button-outline-variant($btn-fse-bg);
+.btn-fonds-fse, .fonds-fse .btn-fonds  {
+  @include button-fonds-variant($btn-fse-bg);
 }

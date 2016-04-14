@@ -13,20 +13,17 @@ body {
 .wrap {
 	background: $body-bg;
 	padding: ($spacer * 2) 0;
-	min-height: 50vh;
+	min-height: 65vh;
+}
+
+.contenu {
+	max-width: 600px;
 }
 
 .section-header {
 	padding-bottom: 0.5rem;
 	margin-bottom: 1rem;
 	border-bottom: 1px solid $gray-lighter;
-}
-
-.fiche-sidebar {
-	padding: 1rem;
-	background: $gray-lightest;
-	border-radius: $border-radius;
-	box-shadow: 1px 1px 0px #ccc;
 }
 
 .backtop {

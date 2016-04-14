@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'h|LL9y+:Q0#_v,ntEXg)vW?eH^+lz(}bntedPxipiP_a{6<Ta|h`|RM!e/xHt1xo');
-define('SECURE_AUTH_KEY',  '~eYTE8c6q*S|{x.+i7]qJx|?(RB:4lwpdjKWJNsdo-M-#fL+`:VRhuOOPsW#uaLI');
-define('LOGGED_IN_KEY',    'ogWF$WG&RbWVFk!@$h|0C-18$fnlHYH*Gv=v1-PO~B<tyid4z[iN,@neYtmu-4vx');
-define('NONCE_KEY',        'Ldw`DXO0&R7j0kne^z`eTcHPD52L}0}=z=<hNwv9N~+E rcWk@<e,,Z>3fPU8t[D');
-define('AUTH_SALT',        'ESzfQw|8jB6d[>BNNMc8fn3:r7W{_~H4%{|3/ljbtYyJ Zv2PZX_e[|A`uFaWtO1');
-define('SECURE_AUTH_SALT', '1]8YBPK:V17+nf|Zp^E~+@;ZO8>}I0Ll`YWlIfq.x<|u+I5/z+!pVSz-jBd5-x|0');
-define('LOGGED_IN_SALT',   '6pQ=^QJ@%-Rm;JRNaAV6r/r=Two^NrgW$Fa/6X%FbY?!XZ.^gX-Z37( aPZ<`<{o');
-define('NONCE_SALT',       'FrLpQ:eMvFQn k{v>)ypr+A*[J4Hs]EA@^c-`p=bFN;BDXB6ClkAhs_wNz[96]Md');
+// define('AUTH_KEY',         'h|LL9y+:Q0#_v,ntEXg)vW?eH^+lz(}bntedPxipiP_a{6<Ta|h`|RM!e/xHt1xo');
+// define('SECURE_AUTH_KEY',  '~eYTE8c6q*S|{x.+i7]qJx|?(RB:4lwpdjKWJNsdo-M-#fL+`:VRhuOOPsW#uaLI');
+// define('LOGGED_IN_KEY',    'ogWF$WG&RbWVFk!@$h|0C-18$fnlHYH*Gv=v1-PO~B<tyid4z[iN,@neYtmu-4vx');
+// define('NONCE_KEY',        'Ldw`DXO0&R7j0kne^z`eTcHPD52L}0}=z=<hNwv9N~+E rcWk@<e,,Z>3fPU8t[D');
+// define('AUTH_SALT',        'ESzfQw|8jB6d[>BNNMc8fn3:r7W{_~H4%{|3/ljbtYyJ Zv2PZX_e[|A`uFaWtO1');
+// define('SECURE_AUTH_SALT', '1]8YBPK:V17+nf|Zp^E~+@;ZO8>}I0Ll`YWlIfq.x<|u+I5/z+!pVSz-jBd5-x|0');
+// define('LOGGED_IN_SALT',   '6pQ=^QJ@%-Rm;JRNaAV6r/r=Two^NrgW$Fa/6X%FbY?!XZ.^gX-Z37( aPZ<`<{o');
+// define('NONCE_SALT',       'FrLpQ:eMvFQn k{v>)ypr+A*[J4Hs]EA@^c-`p=bFN;BDXB6ClkAhs_wNz[96]Md');
 
 /**#@-*/
 
@@ -100,6 +100,6 @@ define('WP_SITEURL', 'http://kitdecom.europe.bzh');
  * Custom Settings
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
-define('DISABLE_WP_CRON', true);
-define('DISALLOW_FILE_EDIT', true);
+// define('DISABLE_WP_CRON', true);
+// define('DISALLOW_FILE_EDIT', true);
 

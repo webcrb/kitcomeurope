@@ -1,30 +1,45 @@
 
-.jumbotron {
-	border : 1px solid $gray;
-	background: $body-bg;
-	
-	.fonds-feder & {
-		
-		border-color: $feder;
+.breadcrumb {
+	margin-bottom: 0;
+}
+
+
+.fiche, .fond {
+	padding-top: 6rem;
+	background-position: center -30px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+	&.fonds-feder, .term-feder &{
+		background-image: url(../images/bg-feder.png);
 	}
-	.fonds-feamp & {
-		border-color: $feamp;
+	&.fonds-feamp, .term-feamp &{
+		background-image: url(../images/bg-feamp.png);
 	}
-	.fonds-fse & {
-		border-color: $fse;
+	&.fonds-fse, .term-fse &{
+		background-image: url(../images/bg-fse.png);
 	}
-	.fonds-feader &, .fonds-feader-leader & {
-		border-color: $feader;
+	&.fonds-feader, &.fonds-feader-leader, .term-feader &, .term-feader-leader &{
+		background-image: url(../images/bg-feader.png);
 	}
 }
 
+.lead {
+	font-family: 'Bretagne';
+	font-size: 1.4rem;
+}
+
+.share {
+	text-align: right;
+	font-size: 1.4rem;
+	margin-bottom: 1em;
+}
 
 .panel {
 	
 	margin-bottom: 1em;
 
 	.panel-heading {
-		
 
 		.panel-title {
 			margin: 0;
@@ -71,7 +86,6 @@
 						.fonds-feader &, .fonds-feader-leader & {
 							background: $feader;
 						}
-
 						
 					}
 
@@ -116,7 +130,7 @@
 	> p a, li a {
 		position: relative;
 		display: inline-block;
-		border-bottom: 1px dotted $brand-primary;
+		border-bottom: 1px solid $brand-primary;
 		transition: all 0.3s;
 
 		.fonds-feder & {
@@ -189,6 +203,42 @@
 }
 
 
-table td {
-	width: 40%;
+table {
+
+	width: 100%;
+	
+	td {
+		width: 40%;
+		
+	}
+
+	ul {
+		margin-left: 0;
+		padding: 1rem;
+	}
+
+	.etape {
+		span {
+			display: block;
+			font-family: 'Bretagne';
+			font-size: 3rem;
+
+			.fonds-feder & {
+				color: $feder;
+			}
+			.fonds-feamp & {
+				color: $feamp;
+			}
+			.fonds-fse & {
+				color: $fse;
+			}
+			.fonds-feader &, .fonds-feader-leader & {
+				color: $feader;
+			}
+		}
+	}
+
+	.empty {
+		background: $gray-lighter,
+	}
 }

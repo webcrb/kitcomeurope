@@ -1,22 +1,7 @@
 
 .content-info {
-	padding-bottom :0;
-	background:  #000;
-	
-    .container, .container-fluid {
-        background: url(../images/bg-footer.png) bottom right no-repeat;
-        background-size: 100%;
-        color:  #fff;
-        padding-top: 1em;
-        padding-bottom: 300px;
-        a {
-            color: #fff;
-            &:hover, &:focus {
-                color: $gray-lighter;
-            }
-        }
-    }
-
-
+	background:  $gray-lighter;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding: 2em 0;
 
 }

@@ -13,3 +13,20 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+.ninja-forms-form-wrap {
+	max-width: 500px;
+
+	.field-wrap {
+		@extend .form-group;
+
+		> .ninja-forms-field {
+			@extend .form-control;
+		}
+	}
+
+	.ninja-forms-field[type="submit"] {
+		@extend .btn;
+		@extend .btn-default;
+	}
+}

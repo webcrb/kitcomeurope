@@ -5,7 +5,7 @@ $montant = get_field('montant');
 ?>
 <?php while (have_posts()) : the_post(); ?>
 
-	<ol class="breadcrumb">
+	<ol class="breadcrumb hidden-print">
 		<li><a href="<?php bloginfo('url') ?>">Accueil</a></li>
 		<li><?php the_terms( $post->ID, 'fonds', '', '' ); ?></li>
 		<li class="active"><?php echo $montant->name; ?></li>
@@ -13,15 +13,16 @@ $montant = get_field('montant');
 
 	<article <?php post_class(); ?>>
 
+		<ul class="share nav nav-inline hidden-print">
+					<li class="nav-item"><a href="#" onclick="window.print();return false;" class="nav-link"><i class="icon-print"></i></a></li>
+					<!-- <li class="nav-item"><a href="#" class="nav-link"><i class="icon-envelope"></i></a></li>
+					<li class="nav-item"><a href="https://twitter.com/home?status=test" class="nav-link"><i class="icon-twitter"></i></a></li> -->
+				</ul>
+
 		<div class="row">
 
-			<div class="col-md-4 col-md-push-8">
 
-				<?php get_template_part('templates/sidebar-fiches'); ?>
-
-			</div> <!-- /.col-md-4 -->
-
-			<div class="col-md-8 col-md-pull-4">
+			<div class="col-md-8">
 
 				<?php get_template_part('templates/header', 'fiches'); ?>
 
@@ -57,9 +58,16 @@ $montant = get_field('montant');
 						</div>
 					</section>
 				</div>
-
+				
 
 			</div><!-- /.col-md-8 -->
+
+			<div class="col-md-4">
+
+				<?php get_template_part('templates/sidebar-fiches'); ?>
+
+			</div> <!-- /.col-md-4 -->
+
 
 		</div> <!-- /row -->
 	</article>

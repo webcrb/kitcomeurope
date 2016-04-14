@@ -31,21 +31,28 @@ if ( $p1->have_posts() ) : ?>
 
         $logotypes = get_field('logotype');
         $gabarits = get_field('gabarits');
+        $ref = get_field('references');
 
         if( !empty($logotypes) ): ?>
 
-          <p><a href="<?php echo $logotypes['url']; ?>" class="btn btn-block btn-lg btn-primary"><i class="icon-briefcase"></i> les logotypes</a><p>
+          <p class="hidden-print"><a href="<?php echo $logotypes['url']; ?>" class="btn btn-block btn-lg btn-fonds"><i class="icon-download"></i> <span>Téléchargez votre logo</span></a><p>
 
         <?php endif;
 
         if( !empty($gabarits) ): ?>
 
-          <p><a href="<?php echo $logotypes['url']; ?>" class="btn btn-block btn-lg btn-primary"><i class="icon-file-text"></i> les gabarits</a><p>
+          <p class="hidden-print"><a href="<?php echo $gabarits['url']; ?>" class="btn btn-block btn-lg btn-fonds"><i class="icon-file-text"></i> <span>Téléchargez votre gabarit</span></a><p>
+
+        <?php endif;
+
+        if( !empty($ref) ): ?>
+
+          <p class="hidden-print"><a href="<?php echo $ref['url']; ?>" class="btn btn-block btn-lg btn-fonds"><i class="icon-gavel"></i> <span>Textes de référence</span></a><p>
 
         <?php endif; ?>
 
           <aside class="fiche-sidebar">
-              <h2>Contact</h2>
+            <h2 class="text-uppercase">Contact</h2>
             <div class="section-content">
               <?php the_field('contact'); ?>
             </div>

@@ -1,40 +1,112 @@
 
-.nav-fonds .list {
+.nav-fonds {
 
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: strech;
-	margin-top: 1em;
+	.list {
 
-	.list-item {
-		
-		flex-basis: 18%;
-		margin-bottom: $grid-gutter-width;
-		position: relative;
-		
-		.menu-item {
-			border-top: 0.5rem solid $gray-lighter;
-			padding-top: 1em;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: stretch;
+		margin-top: 2rem;
+		height: 230px;
+
+		.list-item {
+			
+			flex-basis: 20%;
+ 			margin-right: 2%;
+			margin-bottom: $grid-gutter-width;
+			position: relative;
+			height: 100%;
+			
+			.menu-item {
+
+				display: block;
+				height: 100%;
+				position: relative;
+				
+
+				.menu-item-wrapper {
+					display: flex;
+					flex-flow: column nowrap;
+					justify-content: space-between;
+					height: 100%;
+					padding: 0.4rem;
+					padding-top: 1.4em;
+					background: transparent;
+					position: relative;
+					z-index: 10;
+					
+					> * {
+						flex: 0;
+						flex-basis: 40%;
+					}
+
+					.fonds-title {
+						font-family: 'Bretagne';
+						font-size: 1.8rem;
+						flex-basis: 1.4rem;
+						color: #333;
+						text-transform: uppercase;
+						
+						&:first-line {							
+							font-weight: bold;
+						}
+
+					}
+
+					small {
+						flex-basis: 1.4rem;
+					}
+				}
+
+				&:before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 0.4rem;
+					background-color: $gray-lighter;
+					position: absolute;
+					top: 0;
+					z-index: 0;
+					transition: all 0.2s ease;
+				}
+
+				&.menu-feder:before {
+					background-color: $feder;
+				}
+				
+				&.menu-feader:before, &.menu-feader-leader:before {
+					background-color: $feader;
+				}
+				
+				&.menu-fse:before {
+					background-color: $fse;
+				}
+				
+				&.menu-feamp:before {
+					background-color: $feamp;
+				}
+
+				
+				&:hover, &:focus {
+					text-decoration: none;
+					.menu-item-wrapper > *, .menu-item-wrapper .fonds-title:first-line {
+						color: #fff;
+						
+					}
+					
+
+					&:before {
+						height: 100%;
+					}
+				}
+			}
+
+			
+			
 		}
 
-		.menu-feder {
-			border-color: $feder;
-		}
-		
-		.menu-feader, .menu-feader-leader {
-			border-color: $feader;
-		}
-		
-		.menu-fse {
-			border-color: $fse;
-		}
-		
-		.menu-feamp {
-			border-color: $feamp;
-		}
-		
-	}
+	} 
 }
 
 .nav-montant {
