@@ -28,10 +28,6 @@
   }
 }
 
-// Captions
-.wp-caption {
-  @extend .thumbnail;
-}
 .wp-caption-text {
   padding: $thumbnail-padding;
 }

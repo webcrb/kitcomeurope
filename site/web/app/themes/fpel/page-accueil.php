@@ -61,8 +61,8 @@ $fondseuropeens = get_terms('fonds', $europeens);
         <ul>
           <li><strong>Pour le FEAMP :</strong> <br>
           Les obligations des bénéficiaires seront mises en ligne sur ce portail, dès validation de la stratégie de communication par la Commission européenne.</li>
-          <li><strong>Pour le PO national FSE :</strong> <br>
-          page en cours de réalisation</li>
+          <li><strong>Pour le programme opérationnel national FSE :</strong> <br>
+          consulter le site <a href="http://www.fse.gouv.fr/">www.fse.gouv.fr</a></li>
         </ul>
     </div>
   </div>

@@ -51,6 +51,8 @@ if ( $p1->have_posts() ) : ?>
 
         <?php endif; ?>
 
+        <p class="hidden-print"><a href="<?php echo get_template_directory_uri(); ?>/Guide_de_com_fonds_europeens_web.pdf" title="télécharger le guide communication en pdf (environ 1.9Mo)" class="btn btn-block btn-lg btn-fonds"><i class="icon-book"></i> <span>Guide de communication</span></a><p>
+
           <aside class="fiche-sidebar">
             <h2 class="text-uppercase">Contact</h2>
             <div class="section-content">
